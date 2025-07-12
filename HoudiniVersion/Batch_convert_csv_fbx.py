@@ -42,7 +42,7 @@ for filename in os.listdir(csv_folder_path):
 
         # set varibles in nodes
         importer_node.parm("file").set(input_csv_path)
-        exporter_node.parm("sopoutput").set(fbx_folder_path)
+        exporter_node.parm("sopoutput").set(fbx_folder_path + "/" + filename.replace(".csv", ".fbx"))
 
         exporter_node.render()
 
